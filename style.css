@@ -1,0 +1,118 @@
+/* 1. Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333333;
+  padding: 20px;
+}
+
+/* 2. Header & Navigation */
+header {
+  background-color: #4a90e2;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Main nav: horizontal on desktop, vertical on mobile */
+nav[aria-label] ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav[aria-label] a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+nav[aria-label] a:hover,
+nav[aria-label] a:focus {
+  text-decoration: underline;
+}
+
+/* 3. Main Content Container */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Section spacing */
+section + section {
+  margin-top: 2rem;
+}
+
+section h2 {
+  color: #4a90e2;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Lists inside sections */
+section ul {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+
+section ul li {
+  margin-bottom: 0.5rem;
+}
+
+section ul li a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+section ul li a:hover,
+section ul li a:focus {
+  text-decoration: underline;
+}
+
+/* Paragraph styling */
+section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* 4. Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777777;
+  margin-top: 3rem;
+}
+
+/* 5. Responsive Breakpoints */
+@media (max-width: 600px) {
+  nav[aria-label] ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
